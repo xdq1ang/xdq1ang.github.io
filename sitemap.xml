@@ -2,14 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/lib/jquery_lazyload/README.html</loc>
+    <loc>http://yoursite.com/notice/index.html</loc>
+    
+    <lastmod>2020-02-01T12:21:41.128Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/lib/jquery_lazyload/bower.json</loc>
     
     <lastmod>2020-02-01T10:27:17.944Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/lib/jquery_lazyload/bower.json</loc>
+    <loc>http://yoursite.com/lib/jquery_lazyload/README.html</loc>
     
     <lastmod>2020-02-01T10:27:17.944Z</lastmod>
     
@@ -40,13 +47,6 @@
     <loc>http://yoursite.com/tags/index.html</loc>
     
     <lastmod>2020-01-31T09:50:55.174Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/tags/index-1.html</loc>
-    
-    <lastmod>2020-01-31T09:49:30.894Z</lastmod>
     
   </url>
   

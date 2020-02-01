@@ -1,25 +1,25 @@
 const ap = new APlayer({
     container: document.getElementById('aplayer'),
     fixed: true,
-    autoplay: true,
+    autoplay: false,
     audio: [
       {
-        name: "暗涌",
-        artist: '王菲',
-        url: 'http://www.ytmp3.cn/down/52980.mp3',
-        cover: 'http://p1.music.126.net/w8RFsMH8VJfPsBmVudYGsA==/109951163020569833.jpg?param=130y130',
+        name: "PDD洪荒之力",
+        artist: '徐梦圆',
+        url: 'http://up.mcyt.net/?down/39868.mp3',
+        cover: 'http://oeff2vktt.bkt.clouddn.com/image/84.jpg',
       },
       {
-        name: 'Wonderful U',
-        artist: 'AGA',
-        url: 'http://www.ytmp3.cn/down/51181.mp3',
-        cover: 'http://p1.music.126.net/Blb_Gi0AJTWIEBLr189F4A==/18791753232142320.jpg?param=130y130',
+        name: '9420',
+        artist: '麦小兜',
+        url: 'http://up.mcyt.net/?down/45967.mp3',
+        cover: 'http://oeff2vktt.bkt.clouddn.com/image/8.jpg',
       },
       {
-        name: '浮夸',
-        artist: '陈奕迅',
-        url: 'http://www.ytmp3.cn/down/49639.mp3',
-        cover: 'http://p1.music.126.net/Bl1hEdJbMSj5YJsTqUjr-w==/109951163520311175.jpg?param=130y130',
+        name: '风筝误',
+        artist: '刘珂矣',
+        url: 'http://up.mcyt.net/?down/46644.mp3',
+        cover: 'http://oeff2vktt.bkt.clouddn.com/image/96.jpg',
       }
     ]
 });
