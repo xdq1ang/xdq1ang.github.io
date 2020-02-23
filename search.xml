@@ -107,6 +107,64 @@
       </tags>
   </entry>
   <entry>
+    <title>计算机网络p14</title>
+    <url>/2020/02/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Cp14/</url>
+    <content><![CDATA[<h1 id="编码-amp-调制（第一话）"><a href="#编码-amp-调制（第一话）" class="headerlink" title="编码&amp;调制（第一话）"></a>编码&amp;调制（第一话）</h1><p>信道上传送的信号:</p>
+<ul>
+<li><strong>基带信号</strong>:传送到<strong>数字信道</strong>上的信号（基带传输）</li>
+<li><strong>宽带信号</strong>:传送到<strong>模拟信道</strong>上的信号（宽带传输）<h3 id="编码和调制"><a href="#编码和调制" class="headerlink" title="编码和调制:"></a>编码和调制:</h3>数据→数字信号:编码<br>数据→模拟信号:调制<blockquote>
+<p>数字数据→数字发送器→数字信号（编码）<br>数字数据→调制器→模拟信号（调制）<br>模拟数据→PCM编码器→数字信号（编码）<br>模拟数据→放大器调制器→模拟信号（调制）</p>
+</blockquote>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机网络p13</title>
+    <url>/2020/02/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Cp13/</url>
+    <content><![CDATA[<h1 id="奈氏准则，香农定理"><a href="#奈氏准则，香农定理" class="headerlink" title="奈氏准则，香农定理"></a>奈氏准则，香农定理</h1><h3 id="失真（信道受-带宽受限，有噪声，干扰）"><a href="#失真（信道受-带宽受限，有噪声，干扰）" class="headerlink" title="失真（信道受  带宽受限，有噪声，干扰）:"></a>失真（信道受  带宽受限，有噪声，干扰）:</h3><ul>
+<li>有失真但可以识别</li>
+<li>有失真但无法识别<blockquote>
+<p>影响失真程度的因素:</p>
+</blockquote>
+</li>
+</ul>
+<p>1.码元传输速率 2.信号传输距离  3.噪声干扰  4.传输媒体质量</p>
+<h5 id="失真的一种现象-码间串扰"><a href="#失真的一种现象-码间串扰" class="headerlink" title="失真的一种现象:码间串扰"></a>失真的一种现象:码间串扰</h5><p><img data-src="https://i.niupic.com/images/2020/02/23/6LrA.jpg" alt="36"></p>
+<blockquote>
+<p>码间串扰:<br>因码元速率过快（单位时间内发送码元的数目，波形的频率过大）<strong>接收端</strong>收到的信号波形<strong>失去了码元之间清晰界限</strong>的现象</p>
+</blockquote>
+<h3 id="奈氏准则★★★★★"><a href="#奈氏准则★★★★★" class="headerlink" title="奈氏准则★★★★★:"></a>奈氏准则★★★★★:</h3><p>在理想低通（<strong>无噪声</strong>，宽带受限）条件下，为了避免码间串扰，<strong>极限码元传输速率</strong>为 2W Baud,  W是信道带宽（单位为Hz）</p>
+<blockquote>
+<p>注:在理想低通环境下的<br> <strong>极限数据传输率=2wlog2V（b/s）</strong><br>             　　    —v是几种码元/码元的离散电平数</p>
+</blockquote>
+<h3 id="奈氏准则得出结论"><a href="#奈氏准则得出结论" class="headerlink" title="奈氏准则得出结论"></a>奈氏准则得出结论</h3><ul>
+<li>在任何信道中，<strong>码元传输的速率是有上限的</strong>。若传输速率超过次上限，就会出现严重的码间串扰问题，使接收端对码元的完全正确识别成为不可能。</li>
+<li>信道的<strong>频带越宽</strong>（即能通过的信号高频分量越多），就可以用更高的频率进行码元的有效传输。</li>
+<li>奈氏准则给出的了<strong>码元传输速率的限制</strong>，但是<strong>并没有</strong>对<strong>信息传输速率</strong>给出限制</li>
+<li>由于码元的传输速率受奈氏准则的制约，所以要提高数据传输速率，就必须设法<strong>使每个码元能携带更多的比特的信息量</strong>，这就需要采用多元制的调制方法。<h3 id="香农定理★★★★★"><a href="#香农定理★★★★★" class="headerlink" title="香农定理★★★★★:"></a>香农定理★★★★★:</h3>在宽带受限且<strong>有噪声</strong>的信道中，为了不产生误差，信息的数据传输速率有上限值。</li>
+<li><em>信道的极限数据传输速率=Wlog2（1+S/N）（b/s）*</em><blockquote>
+<p><strong>信噪比</strong>:噪声对信号的影响是相对的，若信号强，则噪声的影响就小。因此引入信噪比</p>
+</blockquote>
+</li>
+<li><em>信噪比=信号的平均功率/噪声的平均功率*</em><br>记为S/N，用（dB）作为度量单位。即</li>
+<li><em>信噪比（dB）=10log10（S/N）*</em><h3 id="香农定理推论"><a href="#香农定理推论" class="headerlink" title="香农定理推论"></a>香农定理推论</h3></li>
+<li>信道的<strong>带宽</strong>或者信道中的<strong>信噪比越大</strong>，则信息的<strong>极限传输速率</strong>就<strong>越高</strong>。</li>
+<li>对一定的传输带宽和一定的信噪比，信息传输速率的上限就确定了。</li>
+<li>只要信息的传输速率<strong>低于</strong>信道的极限传输速率，就一定能找到某种方法来实现<strong>无差错的传输</strong></li>
+<li>香农定理得出的为极限信息传输速率，实际信道能达到的传输速率要比它低不少。</li>
+<li>从香农定理可以看出，若信道的带宽W,或信噪比没有上限（不可能），那么信道的极限传输速率也没有上限。</li>
+</ul>
+<p><img data-src="https://i.niupic.com/images/2020/02/23/6LvA.jpg" alt="89"></p>
+]]></content>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算机网络p4</title>
     <url>/2020/02/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Cp4/</url>
     <content><![CDATA[<h1 id="性能指标之时延，时延带宽积，往返时间RTT，利用率"><a href="#性能指标之时延，时延带宽积，往返时间RTT，利用率" class="headerlink" title="性能指标之时延，时延带宽积，往返时间RTT，利用率"></a>性能指标之时延，时延带宽积，往返时间RTT，利用率</h1><h3 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h3><p>数据（报文/分组/比特流）从网络（或链路）的一端传送到另一端的时间。也称 延迟 或者迟延。单位 s</p>
@@ -126,12 +184,66 @@
       </tags>
   </entry>
   <entry>
+    <title>计算机网络p12</title>
+    <url>/2020/02/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Cp12/</url>
+    <content><![CDATA[<h1 id="码元，波特，速率，带宽"><a href="#码元，波特，速率，带宽" class="headerlink" title="码元，波特，速率，带宽"></a>码元，波特，速率，带宽</h1><h3 id="码元"><a href="#码元" class="headerlink" title="码元"></a>码元</h3><p><img data-src="https://i.niupic.com/images/2020/02/23/6Lqk.jpg" alt="86"></p>
+<blockquote>
+<p><strong>码元</strong>是指一个<strong>固定时长</strong>的<strong>信号波形</strong>（数字脉冲），代表不同离散数值的基本波形，是数字通信中数字信号的计量单位，这个时长内信号称为k进制码元，而该时长称为码元宽度。当码元的离散状态有M个时（M&gt;2）称M进制码元。<strong>1码元可以携带多个比特的信息量</strong>。例如，在使用二进制编码时，只有两种不同的码元，一种代表0状态，一种代表1状态</p>
+</blockquote>
+<p><img data-src="https://i.niupic.com/images/2020/02/23/6Lqi.jpg" alt="80"></p>
+<h3 id="速率，波特，带宽"><a href="#速率，波特，带宽" class="headerlink" title="速率，波特，带宽"></a>速率，波特，带宽</h3><p>速率（<strong>把数据从主机发送到链路上的速率，不是传播速率</strong>）:</p>
+<blockquote>
+<p>速率也叫数据率，是指数据的<strong>传输速率</strong>，表示单位时间内传输的数据量。可以用 <strong>码元传输速率</strong>和<strong>信息传输速率</strong>表示</p>
+</blockquote>
+<ul>
+<li><strong>码元传输速率（1s传输多少码元）</strong>:别名码元速率，波形速率，调制速率，符号速率等。它表示单位时间内数字通信系统所传输的码元个数（也称为脉冲个数或信号变化的次数），单位是<strong>波特</strong>（Baud）。1波特表示数字通信系统每秒传输一个码元。这里的码元可以是多进制的，也可以是二进制的，但是码元速率和进制数无关。</li>
+<li><strong>信息传输速率（1s传输多少个比特）</strong>:别名信息速率，比特速率，比特率等。表示单位时间数字通信系统传输的二进制码元的个数（即比特数）。单位是比特/秒（b/s）<blockquote>
+<p>关系:若一个码元携带n比特信息量，则m 波特的码元传输速率所对应的信息传输速率为 m x n bit/s</p>
+</blockquote>
+</li>
+</ul>
+<p><img data-src="https://i.niupic.com/images/2020/02/23/6Lrh.jpg" alt="96"></p>
+]]></content>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算机网络p3</title>
     <url>/2020/02/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Cp3/</url>
     <content><![CDATA[<h1 id="性能指标之速率，带宽，吞吐量"><a href="#性能指标之速率，带宽，吞吐量" class="headerlink" title="性能指标之速率，带宽，吞吐量"></a>性能指标之速率，带宽，吞吐量</h1><h3 id="速率"><a href="#速率" class="headerlink" title="速率"></a>速率</h3><p>数据率或数据传输率或比特率<br>链接在计算机网络上的主机在数字信道上传送数据位数的速率（单位是b/s  kb/s  Mb/s  Gb/s  Tb/s）<br><img data-src="https://i.niupic.com/images/2020/02/22/6Jxx.jpg" alt="b"></p>
 <h3 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h3><ul>
 <li>带宽 原本指某个信号具有的频带宽度，即最高频率和最低频率之差，单位是赫兹（Hz）</li>
 <li>在计算机网络中，带宽用来表示通信线路传送数据的能力，通常是指单位时间内从网络中的某一点到另一点所能通过的 “最高数据率” 。单位是“比特每秒“，b/s   kb/s  Mb/s   Gb/s（10^3）网络设备支持的最高速率         （单位时间发送端发送的数据数目，而不是线路的数据传输能力）<h3 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h3>表示在单位时间内通过某个网络（或者信道，接口）的数据量。吞吐量受网络的带宽或者网络的额定速率的限制（带宽是吞吐量的理想值，不可能达到的速率）</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机网络p11</title>
+    <url>/2020/02/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Cp11/</url>
+    <content><![CDATA[<h1 id="数据通信的基础知识"><a href="#数据通信的基础知识" class="headerlink" title="数据通信的基础知识"></a>数据通信的基础知识</h1><h3 id="典型的数据通信模型"><a href="#典型的数据通信模型" class="headerlink" title="典型的数据通信模型"></a>典型的数据通信模型</h3><p><img data-src="https://i.niupic.com/images/2020/02/23/6Lq7.jpg" alt="66"></p>
+<h3 id="数据通信的相关术语"><a href="#数据通信的相关术语" class="headerlink" title="数据通信的相关术语:"></a>数据通信的相关术语:</h3><ul>
+<li>数据:传送信息的实体，通常是有意义的符号序列。</li>
+<li>信号:数据的电气/电磁的表现，是数据在传输过程中的存在形式。<ul>
+<li>数字信号:代表消息的参数取值是离散的（矩形波）</li>
+<li>模拟信号:代表消息的参数取值是离散的（正弦波）</li>
+</ul>
+</li>
+<li>信源:产生和发送数据的源头。</li>
+<li>信宿:接收数据的重点。</li>
+<li>信道:信号的传输媒介。一般用来表示向某一个方向传送信息的介质，因此，一条通信线路往往包括一条发送信道和一条接收信道。<ul>
+<li>模拟信道，数字信道</li>
+<li>无线信道，有线信道<h3 id="三种通信方式"><a href="#三种通信方式" class="headerlink" title="三种通信方式:"></a>三种通信方式:</h3></li>
+</ul>
+</li>
+<li>单工通信:只有一个方向的通信，而且没有反方向的交互，仅有一条信道。（发送方和接收方固定）</li>
+<li>半双工通信:通信的双方都可以发送和接收信息，但是都不能同时发送和接收，需要两条信道。</li>
+<li>全双工通信:通信双方可以同时发送和接收信息，也需要两条信道。<h3 id="两种数据传输方式"><a href="#两种数据传输方式" class="headerlink" title="两种数据传输方式"></a>两种数据传输方式</h3></li>
+<li>串行传输:一个比特一个比特排队传输（<strong>速度慢，费用低，适合远距离</strong>）</li>
+<li>并行传输:同时发送好几个比特（<strong>速度快，费用高，适合近距离</strong>）<br><img data-src="https://i.niupic.com/images/2020/02/23/6Lqb.jpg" alt="88"></li>
 </ul>
 ]]></content>
       <tags>
@@ -149,6 +261,33 @@
 <li>国际电信联盟ITU:  制定通信规则</li>
 <li>国际电气电子工程师协会IEEE:学术机构，IEEE802标准，5G标准</li>
 <li>internet工程任务组IETF:英特网相关标准的制定 RFC XXX</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机网络p10</title>
+    <url>/2020/02/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Cp10/</url>
+    <content><![CDATA[<h3 id="第二章的剧透"><a href="#第二章的剧透" class="headerlink" title="第二章的剧透"></a>第二章的剧透</h3><ul>
+<li>通信基础</li>
+<li>两个公式lim   （★）</li>
+<li>看图说话</li>
+<li>传输介质</li>
+<li>物理层设备<h3 id="物理层的基本概念"><a href="#物理层的基本概念" class="headerlink" title="物理层的基本概念"></a>物理层的基本概念</h3><blockquote>
+<p>物理层解决如何在连接各种计算机的传输媒体上<strong>传输数据比特流</strong>，而不是指具体的传输媒体</p>
+</blockquote>
+<h3 id="物理层主要任务"><a href="#物理层主要任务" class="headerlink" title="物理层主要任务:"></a>物理层主要任务:</h3><blockquote>
+<p>确定与传输媒体接口有关的一些特性</p>
+</blockquote>
+<h3 id="物理层规定了哪些特性"><a href="#物理层规定了哪些特性" class="headerlink" title="物理层规定了哪些特性"></a>物理层规定了哪些特性</h3><ul>
+<li>机械特性:定义物理连接的特性，规定物理连接时所采用的<strong>规格</strong>，<strong>接口形状</strong>，<strong>引线数目</strong>，<strong>引脚数目</strong>和<strong>排列</strong>情况等。</li>
+</ul>
+</li>
+<li>电气特性:规定传输<strong>二进制位</strong>时，线路上信号的<strong>电压范围</strong>，<strong>阻抗匹配</strong>，<strong>传输速率</strong>和<strong>距离限制</strong>等。</li>
+<li>指明某条线路上出现的<strong>某一电平表示何种意义</strong>，接口部件的信号线的用途。</li>
+<li>规程特性:（过程特性）定义各条物理线路的工作<strong>规程和时序</strong>关系</li>
 </ul>
 ]]></content>
       <tags>
@@ -229,6 +368,24 @@
 </ul>
 <hr>
 <h3 id="脑图"><a href="#脑图" class="headerlink" title="脑图"></a>脑图</h3><p><img data-src="https://i.niupic.com/images/2020/02/22/6JpE.jpg" alt=""></p>
+]]></content>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机网络p8</title>
+    <url>/2020/02/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Cp8/</url>
+    <content><![CDATA[<h1 id="OSI参考模型与TCP-IP参考模型"><a href="#OSI参考模型与TCP-IP参考模型" class="headerlink" title="OSI参考模型与TCP/IP参考模型"></a>OSI参考模型与TCP/IP参考模型</h1><p><img data-src="https://i.niupic.com/images/2020/02/23/6LpF.jpg" alt="28"></p>
+<h3 id="相同点"><a href="#相同点" class="headerlink" title="相同点:"></a>相同点:</h3><ul>
+<li>都分层</li>
+<li>都是基于独立的协议栈的概念</li>
+<li>可以实现异构网络互联（不同厂家设备互联）<h3 id="不同点"><a href="#不同点" class="headerlink" title="不同点:"></a>不同点:</h3></li>
+<li>OSI定义三点:服务，协议，接口</li>
+<li>OSI先出现，参考模型先于协议的发明，不偏向特定的协议（TCP/IP是先发明协议，然后在根据协议把TCP/IP的架构弄出来）</li>
+<li>TCP/IP设计之初就考虑到异构网络互联的问题，将IP作为重要层次</li>
+<li>如图<br><img data-src="https://i.niupic.com/images/2020/02/23/6LpJ.jpg" alt="55"><br><img data-src="https://i.niupic.com/images/2020/02/23/6LpK.jpg" alt="66"><h1 id="5层参考模型"><a href="#5层参考模型" class="headerlink" title="5层参考模型"></a>5层参考模型</h1>综合了OSI和TCP/IP的优点<br><img data-src="https://i.niupic.com/images/2020/02/23/6LpT.jpg" alt="58"><h3 id="5层参考模型的数据封装和解封装"><a href="#5层参考模型的数据封装和解封装" class="headerlink" title="5层参考模型的数据封装和解封装"></a>5层参考模型的数据封装和解封装</h3><img data-src="https://i.niupic.com/images/2020/02/23/6LpU.jpg" alt="112"></li>
+</ul>
 ]]></content>
       <tags>
         <tag>计算机网络</tag>
