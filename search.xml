@@ -1,6 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>数据链路层之差错控制（检错编码）</title>
+    <url>/2020/02/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Cp21/</url>
+    <content><![CDATA[<h1 id="数据链路层之差错控制（检错编码）"><a href="#数据链路层之差错控制（检错编码）" class="headerlink" title="数据链路层之差错控制（检错编码）"></a>数据链路层之差错控制（检错编码）</h1><h3 id="差错从何而来？"><a href="#差错从何而来？" class="headerlink" title="差错从何而来？"></a>差错从何而来？</h3><ul>
+<li>全局性:由线路本身电气特性所产生的<strong>随机噪声</strong>（热噪声），是信道固有的，随机存在的（提高信噪比解决）</li>
+<li>局部性:外界特定短暂原因造成的<strong>冲击噪声</strong>，是产生差错的主要原因（利用编码技术解决）<h3 id="差错类型"><a href="#差错类型" class="headerlink" title="差错类型"></a>差错类型</h3></li>
+<li>位错（比特位出错，1变成0，0变成1）</li>
+<li>帧错<ul>
+<li>帧丢失</li>
+<li>帧重复</li>
+<li>帧失序<h3 id="数据链路层的差错控制"><a href="#数据链路层的差错控制" class="headerlink" title="数据链路层的差错控制"></a>数据链路层的差错控制</h3>差错控制（比特错）</li>
+</ul>
+</li>
+<li>检错编码<ul>
+<li>奇偶校验码</li>
+<li>循环冗余码CRC</li>
+</ul>
+</li>
+<li>纠错编码:海明码</li>
+</ul>
+<p><img data-src="https://i.niupic.com/images/2020/02/25/6Tpe.jpg" alt=""><br><img data-src="https://i.niupic.com/images/2020/02/25/6TpO.jpg" alt=""></p>
+<h3 id="奇偶校验码"><a href="#奇偶校验码" class="headerlink" title="奇偶校验码"></a>奇偶校验码</h3><blockquote>
+<p>n-1位信息元，1位校验元。</p>
+</blockquote>
+<ul>
+<li>奇校验码（1的个数为<strong>奇数</strong>，加上检验员之后为奇数）</li>
+<li>偶校验码（1的个数为<strong>偶数</strong>，加上检验员之后为偶数）<br><img data-src="https://i.niupic.com/images/2020/02/25/6Tss.jpg" alt=""><br><img data-src="https://i.niupic.com/images/2020/02/25/6Tw8.jpg" alt=""><br>（奇偶校验码只能检测<strong>奇数个比特出错</strong>的错误，检错能力为50%，偶数个比特出错之后，1的个数仍为奇数/偶数）<h3 id="CRC循环冗余码"><a href="#CRC循环冗余码" class="headerlink" title="CRC循环冗余码"></a>CRC循环冗余码</h3><blockquote>
+<p><strong>用要传的数据 /生成多项式=整数···FCS帧校验序列/冗余码</strong></p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p><strong>最终发送的数据:要传送的数据 +冗余码/FCS帧校验码</strong>，<br><strong>接收端收到的数据 /生成多项式=整数（如果余数为0则判定无错，就接受）</strong><br><img data-src="https://i.niupic.com/images/2020/02/25/6TyP.jpg" alt=""></p>
+</blockquote>
+<p>例题<br><img data-src="https://i.niupic.com/images/2020/02/25/6TAB.jpg" alt=""><br><img data-src="https://i.niupic.com/images/2020/02/25/6TBk.jpg" alt=""></p>
+<blockquote>
+<p><strong>注意:检错编码并不能实现可靠传输，因为可靠传输是指发送什么则传输什么，而检错编码会丢弃一些错误的编码</strong></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>封装成帧和透明传输</title>
+    <url>/2020/02/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Cp20/</url>
+    <content><![CDATA[<h1 id="封装成帧和透明传输"><a href="#封装成帧和透明传输" class="headerlink" title="封装成帧和透明传输"></a>封装成帧和透明传输</h1><h3 id="封装成帧（发送端）"><a href="#封装成帧（发送端）" class="headerlink" title="封装成帧（发送端）"></a>封装成帧（发送端）</h3><blockquote>
+<p>就是在一段数据的前后部分添加首部和尾部，这样就构成了一个帧。接收端在收到物理层上交的比特流后，就能根据首部和尾部的标记，从收到的比特流中识别帧的开始和结束。<br>首部和尾部包含许多的控制信息，他们的一个重要作用:<strong>帧定界</strong>。</p>
+</blockquote>
+<p>组帧的方法:</p>
+<ul>
+<li>字符统计法</li>
+<li>字符（节）填充法</li>
+<li>零比特填充法</li>
+<li>违规编码法</li>
+</ul>
+<h3 id="帧同步（接收端）"><a href="#帧同步（接收端）" class="headerlink" title="帧同步（接收端）"></a>帧同步（接收端）</h3><blockquote>
+<p>接收方应当能从接收到的二进制比特流中区分出帧的起始和终止。</p>
+</blockquote>
+<h3 id="透明传输（不管数据中有什么内容）"><a href="#透明传输（不管数据中有什么内容）" class="headerlink" title="透明传输（不管数据中有什么内容）"></a>透明传输（不管数据中有什么内容）</h3><blockquote>
+<p>不管传输的是什么样的比特组合，都应该能够在链路上传送。因此，链路层流应该”看不见”有什么妨碍数据传输的东西。<br><img data-src="https://i.niupic.com/images/2020/02/25/6T9U.jpg" alt=""></p>
+</blockquote>
+<h3 id="1-字符计数法（容易出错）"><a href="#1-字符计数法（容易出错）" class="headerlink" title="1.字符计数法（容易出错）:"></a>1.字符计数法（容易出错）:</h3><blockquote>
+<p>帧首部使用一个计数字段（第一个字节，八位）来标明帧内的字符数。<br><img data-src="https://i.niupic.com/images/2020/02/25/6TaI.jpg" alt=""></p>
+</blockquote>
+<h3 id="2-字符填充法"><a href="#2-字符填充法" class="headerlink" title="2.字符填充法:"></a>2.字符填充法:</h3><blockquote>
+<p>用SOH表示一帧开始，用EOT表示一帧结束<br><img data-src="https://i.niupic.com/images/2020/02/25/6TbA.jpg" alt=""><br><strong>1</strong>.传送的帧是文本文件时（文本文件的字符都是从键盘上输入的，都是ASCII码，<strong>不会和SOH,EOT冲突</strong>），不管从键盘上输入什么字符都可以放在帧里传送过去，即<strong>透明传输</strong>。<br><strong>2</strong>.当传送的帧是由非ASCII码的文本文件组成时（二进制代码的程序或图像等）。就要采用<strong>字符填充法实现透明传输</strong>。<strong>当文本中出现SOH,EOT与帧定界符冲突时，在文本中的SOH/EOT前面插入ESC字符</strong><br><img data-src="https://i.niupic.com/images/2020/02/25/6Tek.jpg" alt=""></p>
+</blockquote>
+<h3 id="零比特填充法"><a href="#零比特填充法" class="headerlink" title="零比特填充法"></a>零比特填充法</h3><blockquote>
+<p><img data-src="https://i.niupic.com/images/2020/02/25/6TfT.jpg" alt=""></p>
+</blockquote>
+<h3 id="违规编码法"><a href="#违规编码法" class="headerlink" title="违规编码法"></a>违规编码法</h3><blockquote>
+<p><img data-src="https://i.niupic.com/images/2020/02/25/6Tgs.jpg" alt=""></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据链路层功能概述</title>
+    <url>/2020/02/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Cp19/</url>
+    <content><![CDATA[<h3 id="第三章剧透"><a href="#第三章剧透" class="headerlink" title="第三章剧透"></a>第三章剧透</h3><ul>
+<li>链路层的功能</li>
+<li>链路层的两种信道</li>
+<li>局域网，广域网</li>
+<li>链路层的设备<h1 id="数据链路层功能概述"><a href="#数据链路层功能概述" class="headerlink" title="数据链路层功能概述"></a>数据链路层功能概述</h1><h3 id="数据链路层的基本概念"><a href="#数据链路层的基本概念" class="headerlink" title="数据链路层的基本概念"></a>数据链路层的基本概念</h3><blockquote>
+<p><strong>数据链路层</strong>负责通过一条链路从一个结点向另一个物理链路直接相连的相邻结点传送数据报。<br><img data-src="https://i.niupic.com/images/2020/02/25/6T2V.jpg" alt=""></p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p><strong>结点</strong>:主机，路由器<br><strong>链路</strong>:网络中两个结点之间的<strong>物理通道</strong>，链路的传输介质主要有双绞线，光纤和微波。分为<strong>有线链路</strong>，<strong>无线链路</strong>。<br><strong>数据链路</strong>:网络中两个结点之间的<strong>逻辑通道</strong>，把实现控制数据传输协议的硬件和软件加到链路上就构成数据链路<br><strong>帧</strong>:链路层的协议数据单元，封装网络层数据报。</p>
+</blockquote>
+<h3 id="数据链路层功能"><a href="#数据链路层功能" class="headerlink" title="数据链路层功能"></a>数据链路层功能</h3><ul>
+<li>功能一:为网络层提供服务。（<strong><em>有连接一定有确认</em></strong>）<ul>
+<li>无确认无连接服务（<strong>源主机发送数据时不用事先建立连接，目的主机收到数据后也不用发送确认</strong>）:用于时事通讯，误码率比较低的通信。</li>
+<li>有确认无连接服务（<strong>事先不用建立连接，接收端收到数据之后发送接收确认。如果太久未收到确认，源主机将数据再发送一次</strong>）</li>
+<li>有确认面向连接服务（<strong>事先建立连接，同时接收端收到每一帧数据之后返回一个确认信息</strong>）</li>
+</ul>
+</li>
+<li>功能二:链路管理，即连接的建立，维持，释放（用于面向连接的服务）</li>
+<li>功能三:组帧。</li>
+<li>功能四:流量控制。（限制发送方）</li>
+<li>功能五:差错控制（帧错/位错）</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>物理层设备</title>
+    <url>/2020/02/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Cp17/</url>
+    <content><![CDATA[<h1 id="物理层设备"><a href="#物理层设备" class="headerlink" title="物理层设备"></a>物理层设备</h1><h3 id="中继器（再生数字信号）"><a href="#中继器（再生数字信号）" class="headerlink" title="中继器（再生数字信号）"></a>中继器（再生数字信号）</h3><blockquote>
+<p><strong>诞生原因</strong>:由于存在损耗，在线路上传输的信号功率会逐渐衰弱，衰减到一定程度时将造成信号失真，因此会导致接收错误。<br><strong>功能</strong>:对信号进行再生和还原，对衰减的信号进行放大，保持与原数据相同，以增强信号传输的距离，延长网络的长度（<strong>两端网络部分是网段，而不是子网，两端速率要相同，只是作为信号的电气部分，不管数据中是否有错误，两端可以连相同媒体，也可以连不同媒体。中继器两端的网段一定要是同一个协议，中继器不会存储转发</strong>）<br><img data-src="https://i.niupic.com/images/2020/02/25/6SXB.jpg" alt=""></p>
+</blockquote>
+<h3 id="集线器（多口中继器）（再生，放大信号）"><a href="#集线器（多口中继器）（再生，放大信号）" class="headerlink" title="集线器（多口中继器）（再生，放大信号）"></a>集线器（多口中继器）（再生，放大信号）</h3><blockquote>
+<p>对信号进行<strong>再生放大转发</strong>，对衰减的信号放大，接着转发到其他所有（除输入端口外）处于工作状态的端口上，以增加信号传输的距离，延长网络的长度。<strong>不具备信号的定向传送功能</strong>（所有端口都收得到），是一个<strong>共享式设备</strong>。集线器不能分割冲突域，连接的设备同时通信时容易冲突。<strong>如果要同时通信，要平分带宽，使得每台设备过得带宽很低。效率低</strong><br><img data-src="https://i.niupic.com/images/2020/02/25/6SZD.jpg" alt=""></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>物理层传输介质</title>
+    <url>/2020/02/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Cp16/</url>
+    <content><![CDATA[<h1 id="物理层传输介质"><a href="#物理层传输介质" class="headerlink" title="物理层传输介质"></a>物理层传输介质</h1><blockquote>
+<p>传输介质也称传输媒体/传输媒介，他是数据传输系统中在发送设备和接收设备之间的物理通路。<strong>传输媒体并不是物理层</strong>传输媒体在物理层的下面。传输媒体为第0层</p>
+</blockquote>
+<p>传输介质:</p>
+<ul>
+<li><strong>导向性传输介质</strong>（电磁波被导向沿着固体媒介（铜线/光纤）传播</li>
+<li><strong>非导向性传输介质</strong>（自由空间，介质可以是空气，真空，海水等）<h3 id="导向性传输介质"><a href="#导向性传输介质" class="headerlink" title="导向性传输介质"></a>导向性传输介质</h3></li>
+<li>双绞线（最古老，又常用），<strong>绞合可以减少相邻导线的电磁干扰</strong><br><img data-src="https://i.niupic.com/images/2020/02/25/6SNB.jpg" alt=""><br><img data-src="https://i.niupic.com/images/2020/02/25/6SOF.jpg" alt=""></li>
+<li>同轴电缆<br><img data-src="https://i.niupic.com/images/2020/02/25/6SPr.jpg" alt=""></li>
+<li>光纤<br><img data-src="https://i.niupic.com/images/2020/02/25/6SQK.jpg" alt=""><br><img data-src="https://i.niupic.com/images/2020/02/25/6SRC.jpg" alt=""><br>光纤特点</li>
+<li>传输损耗小，中继距离长，对远距离传输特别经济。</li>
+<li>抗雷电和电磁干扰性能好。</li>
+<li>无串音干扰，保密性好，也不易被窃听或截取数据。</li>
+<li>体积小，重量轻。<h3 id="非导向性传输介质"><a href="#非导向性传输介质" class="headerlink" title="非导向性传输介质"></a>非导向性传输介质</h3></li>
+<li>无线电波（发散，向所有方向传播）</li>
+<li>微波（沿着固定方向传播）</li>
+<li>红外线，激光（沿着固定方向传播）<br><img data-src="https://i.niupic.com/images/2020/02/25/6SUs.jpg" alt=""></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>编码和调制（第二话）</title>
+    <url>/2020/02/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Cp15/</url>
+    <content><![CDATA[<h1 id="编码和调制（第二话）"><a href="#编码和调制（第二话）" class="headerlink" title="编码和调制（第二话）"></a>编码和调制（第二话）</h1><h3 id="数字数据编码为数字信号"><a href="#数字数据编码为数字信号" class="headerlink" title="数字数据编码为数字信号"></a>数字数据编码为数字信号</h3><ul>
+<li>非归零编码（NRZ）（高1低0）</li>
+<li>曼彻斯特编码（正变1 反变0）</li>
+<li>差分曼彻斯特编码（同一异零）</li>
+<li>归零编码（RZ）（高1低0，且每次变化之后归零）</li>
+<li>反向不归零编码（NRZI）（信号电平翻转为0，电平不翻转为1）</li>
+<li>4B/5B编码:在比特流中插入额外的比特以打破一连串的0或1<h3 id="数字数据调制为模拟信号"><a href="#数字数据调制为模拟信号" class="headerlink" title="数字数据调制为模拟信号"></a>数字数据调制为模拟信号</h3></li>
+<li>调幅（2ASK）:没有振幅0，有振幅1</li>
+<li>调频（2FSK）:频率低0，频率高1</li>
+<li>调相（2PSK）:正相1，反相0</li>
+</ul>
+<p><img data-src="https://i.niupic.com/images/2020/02/25/6SFx.jpg" alt="xx"></p>
+<h3 id="模拟数据编码为数字信号（例如pcm编码）"><a href="#模拟数据编码为数字信号（例如pcm编码）" class="headerlink" title="模拟数据编码为数字信号（例如pcm编码）"></a>模拟数据编码为数字信号（例如pcm编码）</h3><ul>
+<li>抽样:对模拟信号周期性扫描，把时间上连续的信号变成时间上离散的信号。<br>为了使得离散信号能无失真地代表被抽样的模拟数据，要使用采样定理进行采样:<strong>f采样频率=&gt;2f信号最高频率</strong></li>
+<li>量化:把抽样取得的电平幅值按照一定的分级标度转化为对应的数字值，并且取整数，这就把连续的电平幅值转换为离散的数字量</li>
+<li>编码:把量化的结果转换为与之对应的二进制编码</li>
+</ul>
+<p><img data-src="https://i.niupic.com/images/2020/02/25/6SJy.jpg" alt=""></p>
+<h3 id="模拟数据填志愿为模拟信号"><a href="#模拟数据填志愿为模拟信号" class="headerlink" title="模拟数据填志愿为模拟信号"></a>模拟数据填志愿为模拟信号</h3><blockquote>
+<p>为了实现传输的有效性，可能需要较高的频率。这种调制方式还可以使用频分复用技术，充分利用带宽资源。在电话机和本地交换机所传输中断的信号是采用模拟信号传输模拟数据的方式，模拟的声音数据是加载到模拟的载波信号中传输的。</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算机网络p14</title>
     <url>/2020/02/23/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9Cp14/</url>
     <content><![CDATA[<h1 id="编码-amp-调制（第一话）"><a href="#编码-amp-调制（第一话）" class="headerlink" title="编码&amp;调制（第一话）"></a>编码&amp;调制（第一话）</h1><p>信道上传送的信号:</p>
