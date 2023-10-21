@@ -23,37 +23,37 @@
 <meta property="og:site_name" content="CoreNotes">
 <meta property="og:description" content="一、NGAP(N2)接口协议概述N2的传输层是SCTP，上层用户是5G NAS  MM  SM   NGAP具备以下能力：  支持建立、保持和释放PDU会话的NG-RAN侧的能力  支持intra-RAT和inter-RAT的切换  传递UE和AMF之间的NAS信令  用户数据报文的资源预留机制  能在协议栈上区分出不同用户，并完成UE相关的信令管理    二、NGAP接口流程分类按照是否和UE相">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://xdq1ang.github.io/..%5Cpost-images%5CNGAP-01.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-02.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-03.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-04.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-05.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-06.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-07.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-08.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-09.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-10.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-11.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-12.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-13.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-14.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-15.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-16.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-17.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-18.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-19.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-20.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-21.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-22.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-23.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-24.png">
-<meta property="og:image" content="e:\MyHEXO\source\post-images\NGAP-25.png">
-<meta property="article:published_time" content="2023-10-21T12:56:56.000Z">
-<meta property="article:modified_time" content="2023-10-21T15:18:28.100Z">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-01.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-02.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-03.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-04.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-05.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-06.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-07.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-08.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-09.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-10.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-11.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-12.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-13.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-14.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-15.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-16.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-17.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-18.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-19.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-20.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-21.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-22.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-23.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-24.png">
+<meta property="og:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-25.png">
+<meta property="article:published_time" content="2023-10-21T12:56:00.000Z">
+<meta property="article:modified_time" content="2023-10-21T15:36:39.541Z">
 <meta property="article:author" content="xdqiang">
 <meta property="article:tag" content="5GC">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://xdq1ang.github.io/..%5Cpost-images%5CNGAP-01.png">
+<meta name="twitter:image" content="https://xdq1ang.github.io/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-01.png">
   
   
   
@@ -339,7 +339,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：8 分钟前
+                    本文最后更新于：3 分钟前
                   
                 
               </p>
@@ -365,7 +365,7 @@
 <li><p>用户数据报文的资源预留机制</p>
 </li>
 <li><p>能在协议栈上区分出不同用户，并完成UE相关的信令管理</p>
-<p><img src="/..%5Cpost-images%5CNGAP-01.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-01.png" srcset="/img/loading.gif" lazyload></p>
 </li>
 </ul>
 <h1 id="二、NGAP接口流程分类"><a href="#二、NGAP接口流程分类" class="headerlink" title="二、NGAP接口流程分类"></a>二、NGAP接口流程分类</h1><h2 id="按照是否和UE相关分类"><a href="#按照是否和UE相关分类" class="headerlink" title="按照是否和UE相关分类"></a>按照是否和UE相关分类</h2><ul>
@@ -387,16 +387,16 @@
 <ul>
 <li>N2 Setup</li>
 </ul>
-<p><img src="E:\MyHEXO\source\post-images\NGAP-02.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-02.png" srcset="/img/loading.gif" lazyload></p>
 </li>
 </ul>
 <h2 id="按照是否需要应答分类"><a href="#按照是否需要应答分类" class="headerlink" title="按照是否需要应答分类"></a>按照是否需要应答分类</h2><ul>
 <li><p>需要应答的流程有：</p>
-<p><img src="E:\MyHEXO\source\post-images\NGAP-03.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="E:\MyHEXO\source\post-images\NGAP-04.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-03.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-04.png" srcset="/img/loading.gif" lazyload></p>
 </li>
 <li><p>不需要应答的流程有（大部分是UE无关的流程）：</p>
-<p><img src="E:\MyHEXO\source\post-images\NGAP-05.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-05.png" srcset="/img/loading.gif" lazyload></p>
 </li>
 </ul>
 <h1 id="三、常见N2接口流程业务串联"><a href="#三、常见N2接口流程业务串联" class="headerlink" title="三、常见N2接口流程业务串联"></a>三、常见N2接口流程业务串联</h1><h2 id="PDU会话建立流程"><a href="#PDU会话建立流程" class="headerlink" title="PDU会话建立流程"></a>PDU会话建立流程</h2><ol>
@@ -408,7 +408,7 @@
 <li><p>NG Setup Response</p>
 </li>
 </ul>
-<p><img src="E:\MyHEXO\source\post-images\NGAP-06.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-06.png" srcset="/img/loading.gif" lazyload></p>
 </li>
 <li><p>Step 2：NG建链后即可为UE服务。UE发起注册流程，gNB配合AMF建立UE的上下文（包括允许的NSSAI、GUAMI、UE安全能力、移动性限制列表等参数）。涉及的消息包括：</p>
 <ul>
@@ -423,7 +423,7 @@
 <li><p>initial Context Setup Response</p>
 </li>
 </ul>
-<p><img src="E:\MyHEXO\source\post-images\NGAP-07.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-07.png" srcset="/img/loading.gif" lazyload></p>
 </li>
 <li><p>Step 3：UE发起PDU会话建立流程。gNB根据网络侧的要求，为UE分配和这个PDU会话及Qos Flow相关的资源（如DRB）。涉及的流程有：</p>
 <ul>
@@ -436,7 +436,7 @@
 <li><p>DOWNLINK NAS TRANSPORT</p>
 </li>
 </ul>
-<p><img src="E:\MyHEXO\source\post-images\NGAP-08.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-08.png" srcset="/img/loading.gif" lazyload></p>
 </li>
 <li><p>PDU会话建立后常见的N2流程，如：</p>
 <ul>
@@ -457,27 +457,27 @@
 <li><p>PDU会话管理流程为某个PDU会话的特定Qos Flow分配Uu和N3口的资源，并且针对该UE建立相应的DRB</p>
 </li>
 <li><p>需要注意，消息是发给AMF，但是因为和PDU会话相关，都是发给SMF处理的</p>
-<p><img src="E:\MyHEXO\source\post-images\NGAP-09.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-09.png" srcset="/img/loading.gif" lazyload></p>
 </li>
 <li><p>PDU会话管理流程通常不单独出现，而作为一个大流程的一部分。例如PDU会话资源建立流程，就是PDU会话建立流程的一部分。摘取相关的部分如下：</p>
-<p><img src="E:\MyHEXO\source\post-images\NGAP-10.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-10.png" srcset="/img/loading.gif" lazyload></p>
 </li>
 </ol>
-<h2 id="UE上下文管理流程"><a href="#UE上下文管理流程" class="headerlink" title="UE上下文管理流程"></a>UE上下文管理流程</h2><p><img src="E:\MyHEXO\source\post-images\NGAP-11.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="UE移动性管理流程"><a href="#UE移动性管理流程" class="headerlink" title="UE移动性管理流程"></a>UE移动性管理流程</h2><p><img src="E:\MyHEXO\source\post-images\NGAP-12.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="寻呼流程"><a href="#寻呼流程" class="headerlink" title="寻呼流程"></a>寻呼流程</h2><p><img src="E:\MyHEXO\source\post-images\NGAP-13.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="NAS消息传送流程"><a href="#NAS消息传送流程" class="headerlink" title="NAS消息传送流程"></a>NAS消息传送流程</h2><p><img src="E:\MyHEXO\source\post-images\NGAP-14.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="接口管理流程"><a href="#接口管理流程" class="headerlink" title="接口管理流程"></a>接口管理流程</h2><p><img src="E:\MyHEXO\source\post-images\NGAP-15.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="配置传递流程"><a href="#配置传递流程" class="headerlink" title="配置传递流程"></a>配置传递流程</h2><p><img src="E:\MyHEXO\source\post-images\NGAP-16.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="警报消息传送流程"><a href="#警报消息传送流程" class="headerlink" title="警报消息传送流程"></a>警报消息传送流程</h2><p><img src="E:\MyHEXO\source\post-images\NGAP-17.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="NRPPa传送流程"><a href="#NRPPa传送流程" class="headerlink" title="NRPPa传送流程"></a>NRPPa传送流程</h2><p><img src="E:\MyHEXO\source\post-images\NGAP-18.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="Trace（跟踪）流程"><a href="#Trace（跟踪）流程" class="headerlink" title="Trace（跟踪）流程"></a>Trace（跟踪）流程</h2><p><img src="E:\MyHEXO\source\post-images\NGAP-19.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="位置报告流程"><a href="#位置报告流程" class="headerlink" title="位置报告流程"></a>位置报告流程</h2><p><img src="E:\MyHEXO\source\post-images\NGAP-20.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="UE-TNLA绑定流程"><a href="#UE-TNLA绑定流程" class="headerlink" title="UE TNLA绑定流程"></a>UE TNLA绑定流程</h2><p><img src="E:\MyHEXO\source\post-images\NGAP-21.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="UE无线能力管理流程"><a href="#UE无线能力管理流程" class="headerlink" title="UE无线能力管理流程"></a>UE无线能力管理流程</h2><p><img src="E:\MyHEXO\source\post-images\NGAP-22.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="Secondary-RAT数据使用量上报流程"><a href="#Secondary-RAT数据使用量上报流程" class="headerlink" title="Secondary RAT数据使用量上报流程"></a>Secondary RAT数据使用量上报流程</h2><p><img src="E:\MyHEXO\source\post-images\NGAP-23.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="NGAP典型消息举例"><a href="#NGAP典型消息举例" class="headerlink" title="NGAP典型消息举例"></a>NGAP典型消息举例</h2><p><img src="E:\MyHEXO\source\post-images\NGAP-24.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="E:\MyHEXO\source\post-images\NGAP-25.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="UE上下文管理流程"><a href="#UE上下文管理流程" class="headerlink" title="UE上下文管理流程"></a>UE上下文管理流程</h2><p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-11.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="UE移动性管理流程"><a href="#UE移动性管理流程" class="headerlink" title="UE移动性管理流程"></a>UE移动性管理流程</h2><p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-12.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="寻呼流程"><a href="#寻呼流程" class="headerlink" title="寻呼流程"></a>寻呼流程</h2><p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-13.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="NAS消息传送流程"><a href="#NAS消息传送流程" class="headerlink" title="NAS消息传送流程"></a>NAS消息传送流程</h2><p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-14.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="接口管理流程"><a href="#接口管理流程" class="headerlink" title="接口管理流程"></a>接口管理流程</h2><p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-15.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="配置传递流程"><a href="#配置传递流程" class="headerlink" title="配置传递流程"></a>配置传递流程</h2><p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-16.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="警报消息传送流程"><a href="#警报消息传送流程" class="headerlink" title="警报消息传送流程"></a>警报消息传送流程</h2><p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-17.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="NRPPa传送流程"><a href="#NRPPa传送流程" class="headerlink" title="NRPPa传送流程"></a>NRPPa传送流程</h2><p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-18.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="Trace（跟踪）流程"><a href="#Trace（跟踪）流程" class="headerlink" title="Trace（跟踪）流程"></a>Trace（跟踪）流程</h2><p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-19.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="位置报告流程"><a href="#位置报告流程" class="headerlink" title="位置报告流程"></a>位置报告流程</h2><p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-20.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="UE-TNLA绑定流程"><a href="#UE-TNLA绑定流程" class="headerlink" title="UE TNLA绑定流程"></a>UE TNLA绑定流程</h2><p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-21.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="UE无线能力管理流程"><a href="#UE无线能力管理流程" class="headerlink" title="UE无线能力管理流程"></a>UE无线能力管理流程</h2><p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-22.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="Secondary-RAT数据使用量上报流程"><a href="#Secondary-RAT数据使用量上报流程" class="headerlink" title="Secondary RAT数据使用量上报流程"></a>Secondary RAT数据使用量上报流程</h2><p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-23.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="NGAP典型消息举例"><a href="#NGAP典型消息举例" class="headerlink" title="NGAP典型消息举例"></a>NGAP典型消息举例</h2><p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-24.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/%5Cpost-images%5CNGAP%E6%A6%82%E8%BF%B0%5CNGAP-25.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -877,20 +877,5 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
