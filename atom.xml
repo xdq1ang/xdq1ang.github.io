@@ -1,26 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>CoreNotes</title>
   
   
+  <link href="https://xdq1ang.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://xdq1ang.github.io/"/>
+  <updated>2023-10-20T13:54:56.461Z</updated>
+  <id>https://xdq1ang.github.io/</id>
+  
+  <author>
+    <name>xdqiang</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
     <title>OAI开源核心网部署</title>
-    <link href="/2023/10/20/oai-kai-yuan-he-xin-wang-bu-shu/"/>
-    <url>/2023/10/20/oai-kai-yuan-he-xin-wang-bu-shu/</url>
+    <link href="https://xdq1ang.github.io/2023/10/20/oai-kai-yuan-he-xin-wang-bu-shu/"/>
+    <id>https://xdq1ang.github.io/2023/10/20/oai-kai-yuan-he-xin-wang-bu-shu/</id>
+    <published>2023-10-20T14:45:17.000Z</published>
+    <updated>2023-10-20T13:54:56.461Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="OAI概述"><a href="#OAI概述" class="headerlink" title="OAI概述"></a>OAI概述</h1><p>OAI-5G核心网络（CN）项目组的目标是提供具有丰富功能集的符合3GPP标准的5G独立（SA）CN实现。OAI 5G CN以灵活的方式设计和实现，可以轻松适应多样化5G用例的需求。OAI 5G CN组件的所有功能都通过专业测试人员、商业gNB（带有COTS UE）和开源RAN模拟器进行持续测试。<br><img src="https://xdq1ang.github.io/post-images/1697732953367.png"></p><h1 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h1><figure class="highlight apache"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">docker</span> pull ubuntu:bionic<br><span class="hljs-attribute">docker</span> pull mysql:<span class="hljs-number">8</span>.<span class="hljs-number">0</span><br></code></pre></td></tr></tbody></table></figure><h1 id="二、拉取Docker镜像"><a href="#二、拉取Docker镜像" class="headerlink" title="二、拉取Docker镜像"></a>二、拉取Docker镜像</h1><figure class="highlight apache"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">docker</span> pull oaisoftwarealliance/oai-amf:v1.<span class="hljs-number">5</span>.<span class="hljs-number">0</span><br><span class="hljs-attribute">docker</span> pull oaisoftwarealliance/oai-nrf:v1.<span class="hljs-number">5</span>.<span class="hljs-number">0</span><br><span class="hljs-attribute">docker</span> pull oaisoftwarealliance/oai-spgwu-tiny:v1.<span class="hljs-number">5</span>.<span class="hljs-number">0</span><br><span class="hljs-attribute">docker</span> pull oaisoftwarealliance/oai-smf:v1.<span class="hljs-number">5</span>.<span class="hljs-number">0</span><br><span class="hljs-attribute">docker</span> pull oaisoftwarealliance/oai-udr:v1.<span class="hljs-number">5</span>.<span class="hljs-number">0</span><br><span class="hljs-attribute">docker</span> pull oaisoftwarealliance/oai-udm:v1.<span class="hljs-number">5</span>.<span class="hljs-number">0</span><br><span class="hljs-attribute">docker</span> pull oaisoftwarealliance/oai-ausf:v1.<span class="hljs-number">5</span>.<span class="hljs-number">0</span><br><span class="hljs-attribute">docker</span> pull oaisoftwarealliance/oai-upf-vpp:v1.<span class="hljs-number">5</span>.<span class="hljs-number">0</span><br><span class="hljs-attribute">docker</span> pull oaisoftwarealliance/oai-nssf:v1.<span class="hljs-number">5</span>.<span class="hljs-number">0</span><br><span class="hljs-attribute">docker</span> pull oaisoftwarealliance/oai-pcf:v1.<span class="hljs-number">5</span>.<span class="hljs-number">0</span><br><span class="hljs-attribute">docker</span> pull oaisoftwarealliance/oai-nef:v1.<span class="hljs-number">5</span>.<span class="hljs-number">0</span><br><span class="hljs-attribute">docker</span> pull oaisoftwarealliance/trf-gen-cn5g:latest<br></code></pre></td></tr></tbody></table></figure><h1 id="三、克隆oai-cn5g-fed项目源代码"><a href="#三、克隆oai-cn5g-fed项目源代码" class="headerlink" title="三、克隆oai-cn5g-fed项目源代码"></a>三、克隆oai-cn5g-fed项目源代码</h1><ol><li><p>拉取源代码<br><code>git clone --branch v1.5.0 https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed.git</code></p></li><li><p>同步git子模块<br><code>cd oai-cn5g-fed</code><br><code>./scripts/syncComponents.sh</code></p></li></ol><h1 id="四、创建网桥"><a href="#四、创建网桥" class="headerlink" title="四、创建网桥"></a>四、创建网桥</h1><ol><li>创建<br><code>docker network create --driver=bridge --subnet=192.168.70.128/26 -o          "com.docker.network.bridge.name"="demo-oai" demo-oai-public-net</code></li><li>查看<br><code> ifconfig demo-oai</code><br> <code>docker network ls</code><br>注意：删除网桥：<br><code>docker network rm demo-oai-public-net</code></li></ol><h1 id="五、包转发配置"><a href="#五、包转发配置" class="headerlink" title="五、包转发配置"></a>五、包转发配置</h1><figure class="highlight stylus"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">sudo sysctl net<span class="hljs-selector-class">.ipv4</span><span class="hljs-selector-class">.conf</span><span class="hljs-selector-class">.all</span>.forwarding=<span class="hljs-number">1</span><br>sudo iptables -P FORWARD ACCEPT<br></code></pre></td></tr></tbody></table></figure><h1 id="七、-模拟基站和终端接入测试"><a href="#七、-模拟基站和终端接入测试" class="headerlink" title="七、 模拟基站和终端接入测试"></a>七、 模拟基站和终端接入测试</h1><ol><li>拉取ueransim容器镜像<br><code>docker pull rohankharade/ueransim</code><br><code>docker image tag rohankharade/ueransim:latest ueransim:latest</code></li><li>5GC部署<br><code>cd oai-cn5g-fed/docker-compose</code><br><code> docker-compose -f docker-compose-basic-vpp-nrf.yaml up -d</code><br>如果报错，请删除现有容器： <figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-comment"># 网络修剪</span><br>docker network prune<br><span class="hljs-comment"># 查看现有容器</span><br>docker container <span class="hljs-built_in">ls</span> <span class="hljs-literal">-a</span><br><span class="hljs-comment"># 删除所有容器</span><br>docker <span class="hljs-built_in">rm</span> <span class="hljs-variable">$</span>(docker <span class="hljs-built_in">ps</span> <span class="hljs-literal">-qa</span>) 或者 docker system prune<br></code></pre></td></tr></tbody></table></figure></li><li>启动UERANSIM<br> <code>docker-compose -f docker-compose-ueransim-vpp.yaml up -d</code></li><li>取消部署<br><code>docker-compose -f docker-compose-ueransim-vpp.yaml down</code><br><code>python3 ./core-network.py --type stop-basic-vpp --scenario 1</code></li></ol><h1 id="八、其他常用指令"><a href="#八、其他常用指令" class="headerlink" title="八、其他常用指令"></a>八、其他常用指令</h1><figure class="highlight powershell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-comment"># 停止所有容器</span><br>docker stop <span class="hljs-variable">$</span>(docker <span class="hljs-built_in">ps</span> <span class="hljs-literal">-a</span> <span class="hljs-literal">-q</span>)<br><span class="hljs-comment"># 抓包</span><br>tshark <span class="hljs-literal">-i</span> demo<span class="hljs-literal">-oai</span> <span class="hljs-operator">-f</span> <span class="hljs-string">"not arp and not port 53 and not host archive.ubuntu.com and not host security.ubuntu.com"</span> <span class="hljs-literal">-w</span> logs.pcap<br>sudo tcpdump <span class="hljs-literal">-i</span> demo<span class="hljs-literal">-oai</span> <span class="hljs-literal">-w</span> logs.pcap<br></code></pre></td></tr></tbody></table></figure><h1 id="九、OAI网元IP"><a href="#九、OAI网元IP" class="headerlink" title="九、OAI网元IP"></a>九、OAI网元IP</h1><table><thead><tr><th>Container</th><th>Ip-address</th></tr></thead><tbody><tr><td>mysql</td><td>192.168.70.131</td></tr><tr><td>oai-amf</td><td>192.168.70.132</td></tr><tr><td>oai-smf</td><td>192.168.70.133</td></tr><tr><td>oai-nrf</td><td>192.168.70.130</td></tr><tr><td>oai-spgwu</td><td>192.168.70.134</td></tr><tr><td>oai-ext-dn</td><td>192.168.70.135</td></tr></tbody></table>]]></content>
     
     
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;&#92;assets&#92;css&#92;APlayer.min.css&quot;&gt;&lt;script src=&quot;&#92;assets&#92;js&#92;APlayer.min.js&quot; cla</summary>
+      
     
-    <tags>
-      
-      <tag>5GC</tag>
-      
-    </tags>
+    
+    
+    
+    <category term="5GC" scheme="https://xdq1ang.github.io/tags/5GC/"/>
     
   </entry>
   
-  
-  
-  
-</search>
+</feed>
