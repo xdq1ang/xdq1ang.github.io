@@ -13,5 +13,5 @@ Disallow: /vendors/
 Disallow: /fancybox/
 
 # 记得替换成你的域名
-Sitemap: https://xdq1ang.github.io/sitemap.xml
-Sitemap: https://xdq1ang.github.io/baidusitemap.xml
+Sitemap: https://xdqiang.cn/sitemap.xml
+Sitemap: https://xdqiang.cn/baidusitemap.xml
