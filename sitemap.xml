@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://xdq1ang.github.io/NGAP/</loc>
+    <loc>https://xdqiang.cn/baidu-seo/</loc>
     
     <lastmod>2023-10-22</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://xdq1ang.github.io/oai-kai-yuan-he-xin-wang-bu-shu/</loc>
+    <loc>https://xdqiang.cn/NGAP/</loc>
     
     <lastmod>2023-10-22</lastmod>
     
@@ -20,7 +20,16 @@
   </url>
   
   <url>
-    <loc>https://xdq1ang.github.io/about/index.html</loc>
+    <loc>https://xdqiang.cn/oai-kai-yuan-he-xin-wang-bu-shu/</loc>
+    
+    <lastmod>2023-10-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xdqiang.cn/about/index.html</loc>
     
     <lastmod>2023-10-20</lastmod>
     
@@ -30,7 +39,7 @@
   
 
   <url>
-    <loc>https://xdq1ang.github.io/</loc>
+    <loc>https://xdqiang.cn/</loc>
     <lastmod>2023-10-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -38,7 +47,21 @@
 
   
   <url>
-    <loc>https://xdq1ang.github.io/tags/5GC/</loc>
+    <loc>https://xdqiang.cn/tags/5GC/</loc>
+    <lastmod>2023-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xdqiang.cn/tags/SEO/</loc>
+    <lastmod>2023-10-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xdqiang.cn/tags/%E7%99%BE%E5%BA%A6/</loc>
     <lastmod>2023-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
