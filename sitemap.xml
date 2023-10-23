@@ -47,13 +47,6 @@
 
   
   <url>
-    <loc>https://xdqiang.cn/tags/5GC/</loc>
-    <lastmod>2023-10-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://xdqiang.cn/tags/SEO/</loc>
     <lastmod>2023-10-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -62,6 +55,13 @@
   
   <url>
     <loc>https://xdqiang.cn/tags/%E7%99%BE%E5%BA%A6/</loc>
+    <lastmod>2023-10-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xdqiang.cn/tags/5GC/</loc>
     <lastmod>2023-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
