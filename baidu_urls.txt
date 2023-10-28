@@ -1,5 +1,5 @@
-https://www.xdqiang.cn/MQ%E6%9E%B6%E6%9E%84/
-https://www.xdqiang.cn/Message%20Queue/
+https://www.xdqiang.cn/RabbitMQ/
+https://www.xdqiang.cn/MessageQueue/
 https://www.xdqiang.cn/baidu-seo/
 https://www.xdqiang.cn/NGAP/
 https://www.xdqiang.cn/oai-kai-yuan-he-xin-wang-bu-shu/
