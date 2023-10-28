@@ -2,18 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.xdqiang.cn/baidu-seo/</loc>
-    
-    <lastmod>2023-10-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.xdqiang.cn/NGAP/</loc>
     
-    <lastmod>2023-10-22</lastmod>
+    <lastmod>2023-10-28</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +13,16 @@
   <url>
     <loc>https://www.xdqiang.cn/oai-kai-yuan-he-xin-wang-bu-shu/</loc>
     
-    <lastmod>2023-10-22</lastmod>
+    <lastmod>2023-10-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xdqiang.cn/baidu-seo/</loc>
+    
+    <lastmod>2023-10-28</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,29 +40,29 @@
 
   <url>
     <loc>https://www.xdqiang.cn/</loc>
-    <lastmod>2023-10-24</lastmod>
+    <lastmod>2023-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://www.xdqiang.cn/tags/5GC/</loc>
-    <lastmod>2023-10-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.xdqiang.cn/tags/SEO/</loc>
-    <lastmod>2023-10-24</lastmod>
+    <lastmod>2023-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.xdqiang.cn/tags/%E7%99%BE%E5%BA%A6/</loc>
-    <lastmod>2023-10-24</lastmod>
+    <lastmod>2023-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xdqiang.cn/tags/5GC/</loc>
+    <lastmod>2023-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
