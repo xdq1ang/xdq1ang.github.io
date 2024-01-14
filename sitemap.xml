@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.xdqiang.cn/%E5%AE%89%E8%A3%85elasticsearch/</loc>
+    
+    <lastmod>2024-01-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.xdqiang.cn/SpringAMQP/</loc>
     
-    <lastmod>2023-11-08</lastmod>
+    <lastmod>2023-12-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -67,7 +76,7 @@
 
   <url>
     <loc>https://www.xdqiang.cn/</loc>
-    <lastmod>2023-11-08</lastmod>
+    <lastmod>2024-01-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -75,28 +84,28 @@
   
   <url>
     <loc>https://www.xdqiang.cn/tags/JAVA/</loc>
-    <lastmod>2023-11-08</lastmod>
+    <lastmod>2024-01-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.xdqiang.cn/tags/5GC/</loc>
-    <lastmod>2023-11-08</lastmod>
+    <lastmod>2024-01-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.xdqiang.cn/tags/SEO/</loc>
-    <lastmod>2023-11-08</lastmod>
+    <lastmod>2024-01-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.xdqiang.cn/tags/%E7%99%BE%E5%BA%A6/</loc>
-    <lastmod>2023-11-08</lastmod>
+    <lastmod>2024-01-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
